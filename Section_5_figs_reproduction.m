@@ -1,5 +1,5 @@
 %% General Settings
-Nreps = 200;
+Nreps = 500;
 noise_distribution = 'normal'; % 'bi_normal', 't_student', 'uniform';
 addpath('toolbox')
 %% Generate Figs 3.a, 3.b
