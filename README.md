@@ -1,4 +1,4 @@
-## Structure-Aware Matrix Pencil Method
+## Structure-Aware Matrix Pencil Method (SAMP)
 
 The MATLAB code in this repository accompanies the paper entitled "Structure-Aware Matrix Pencil Method", and reproduces the results in Section VII (Numerical Results) utilizing the SAMP Algorithm (Proposed Algorithm).
 
