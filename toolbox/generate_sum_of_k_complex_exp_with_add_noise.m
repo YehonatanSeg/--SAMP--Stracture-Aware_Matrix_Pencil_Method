@@ -43,7 +43,7 @@ if ~isempty(SNR)
         n = randn(size(fc)) + 1i*randn(size(fc));
     elseif strcmp(noise_type, 'uniform')
         n = rand(size(fc))  + 1i*rand(size(fc));
-    elseif strcmp(noise_type, 'skew_normal')
+    elseif strcmp(noise_type, 'bi_normal')
         n = randsn(size(fc), 0, 2, 1, 0.1) + 1i*randsn(size(fc), 0, 2, 1, 0.1);
     elseif strcmp(noise_type, 't_student')
         n = trnd(1, size(fc)) + 1i*trnd(1, size(fc));
