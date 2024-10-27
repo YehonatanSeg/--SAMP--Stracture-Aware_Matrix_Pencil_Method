@@ -59,9 +59,6 @@ for k=1:length(METHODS)
     end
 end
 
-% Compute the CRB for unbiased estimator (it is "almost" unbiased in our case)
-% CRB = get_full_CRB(params);
-
 %% FREQUENCY PLOTS
 
 % Produce RMSE plots
@@ -74,11 +71,9 @@ freqs_bias_figs = produce_single_param_plots(Single_FREQ_BIAS, [], [], params, c
 if strcmp(X_AXIS.x_axis_param, 'SNR')
 % Define the desired component
 SNR_level = 10;
-ind = find(X_AXIS.x == SNR_level);
+ind = (X_AXIS.x == SNR_level);
 
 ALL_EST_FREQS = [];
-ALL_EST_DAMPS = [];
-ALL_EST_AMPS  = [];
 for k=1:length(METHODS)
     method = eval(METHODS{k});
     fields = fieldnames(method.Poles);
@@ -221,11 +216,7 @@ function [pole_estim_err, freqs_est, frequency_estim_err, damps_est, damping_est
     for n=1:size(poles_est,1)
         for m=1:size(poles_est,2)
 
-            if strcmp(x_axis_param, 'F1')
-                true_frequency = params.F1_RANGE(n);
-                true_damping   = params.true_damps(param_num);
-
-            elseif strcmp(x_axis_param, 'DIFF')
+            if strcmp(x_axis_param, 'FREQS_DIST')
                 N = 1 +params.interval_length / params.dt;
                 curr_freqs = [min(params.true_freqs) + params.FREQ_DIST_RANGE(n) * pi / (N*params.dt),min(params.true_freqs)];
                 true_frequency = curr_freqs(param_num);
@@ -373,7 +364,7 @@ function fig = produce_single_param_plots(Single_param_est, Single_param_bias ,c
     grid on;
     box on;
 
-    if strcmp(X_AXIS.x_axis_param, 'DIFF')
+    if strcmp(X_AXIS.x_axis_param, 'FREQS_DIST')
         xticks([1,2,3,4])
         xticklabels({'$\frac{\pi}{N}$', '$\frac{2\pi}{N}$', '$\frac{3\pi}{N}$', '$\frac{4\pi}{N}$'})
         set(gca, 'TickLabelInterpreter', 'latex')

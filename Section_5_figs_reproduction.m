@@ -16,6 +16,9 @@ addpath('toolbox')
 % Produce graph
 plot_detection_graph(params, AIC, MDL, GAP,EFF, KMEANS, 'SNR')
 
+% Force the plot to update
+drawnow; 
+pause(0.1);
 %% Generate Figs 3.c, 3.d
 
 % Generate Data
@@ -29,6 +32,9 @@ plot_detection_graph(params, AIC, MDL, GAP,EFF, KMEANS, 'SNR')
 % Produce graph
 plot_detection_graph(params, AIC, MDL, GAP,EFF, KMEANS, 'SAMPLES')
 
+% Force the plot to update
+drawnow; 
+pause(0.1);
 %% Generate Figs 3.e, 3.f
 
 % Generate Data
@@ -42,7 +48,9 @@ plot_detection_graph(params, AIC, MDL, GAP,EFF, KMEANS, 'SAMPLES')
 % Produce graph
 plot_detection_graph(params, AIC, MDL, GAP,EFF, KMEANS, 'FREQS_DIST')
 
-
+% Force the plot to update
+drawnow; 
+pause(0.1);
 %% Generate Figs 4,5,8,9
 
 % Generate Data 
@@ -69,7 +77,9 @@ plot_estimation_graphs(params, CRB, AIC, MDL, GAP,EFF, KMEANS, 'SNR')
 % Produce graph
 plot_estimation_graphs(params, CRB, AIC, MDL, GAP,EFF, KMEANS, 'SAMPLES')
 
-
+% Force the plot to update
+drawnow; 
+pause(0.1);
 %% Generate Figs 11.a, 11.b, Figs 11.c, 11.d
 
 % Generate Data 
@@ -83,6 +93,9 @@ plot_estimation_graphs(params, CRB, AIC, MDL, GAP,EFF, KMEANS, 'SAMPLES')
 % Produce graph
 plot_estimation_graphs(params, CRB, AIC, MDL, GAP,EFF, KMEANS, 'FREQS_DIST')
 
+% Force the plot to update
+drawnow; 
+pause(0.1);
 %% Generate Fig 6.a, 6.b
 
 % Generate Data 
@@ -92,6 +105,9 @@ plot_estimation_graphs(params, CRB, AIC, MDL, GAP,EFF, KMEANS, 'FREQS_DIST')
 % Produce graph
 plot_time_compare_graphs_MDL_AIC_SAMP(Poles, Times, params)
 
+% Force the plot to update
+drawnow; 
+pause(0.1);
 %% Generate Fig 7a, 7.b
 
 % Generate Data 
