@@ -5,7 +5,6 @@ close all;
 
 % Settings for simulating sum of complex exponentials by Eq (1)
 params.dt = 1/15;
-
 params.interval_length = 10;
 N = 1 +params.interval_length / params.dt;
 w1 = 2;
