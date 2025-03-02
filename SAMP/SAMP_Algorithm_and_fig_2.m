@@ -1,3 +1,6 @@
+addpath(fullfile(fileparts(pwd), 'toolbox'));
+clear;
+close all;
 %% Simulating a sum of complex exponentials and additive noise
 
 % Settings for simulating sum of complex exponentials by Eq (2)
@@ -135,10 +138,6 @@ xlabel('$\theta$', 'Interpreter', 'latex')
 plot([params.true_freqs(1) params.true_freqs(1)],[0 1], '-.','color', 'black');
 legend('$|\mathcal{F}(\widetilde{\mathbf{Z}}_L^{1})|$', '$\theta_1$', 'Interpreter', 'latex')
 
-path = 'C:\Users\yehon\Desktop\Phd Studies\Projects\SAMP\Code\Images';
-name = 'DFT_signal_modes_1.png';
-exportgraphics(fig1,[path,'\', name],'Resolution',300) 
-
 fig2 = figure(); hold on;
 fig2.WindowState = 'maximized';
 plot(frequencies,y(:,true_ind(2))); 
@@ -148,9 +147,6 @@ xlabel('$\theta$', 'Interpreter', 'latex')
 plot([params.true_freqs(2) params.true_freqs(2)],[0 1], '-.','color', 'black');
 legend('$|\mathcal{F}(\widetilde{\mathbf{Z}}_L^{2})|$', '$\theta_2$', 'Interpreter', 'latex')
 
-name = 'DFT_signal_modes_2.png';
-exportgraphics(fig2,[path,'\', name],'Resolution',300) 
-
 fig3 = figure();
 fig3.WindowState = 'maximized';
 plot(frequencies,y(:,max(true_ind)+1))
@@ -158,9 +154,6 @@ ylim([0,1]);
 ylabel('Coefficients')
 xlabel('$\theta$', 'Interpreter', 'latex')
 legend('$|\mathcal{F}(\widetilde{\mathbf{Z}}_L^{3})|$', 'Interpreter', 'latex')
-
-name = 'DFT_noise_modes_1.png';
-exportgraphics(fig3,[path,'\', name],'Resolution',300) 
 
 fig4 = figure();
 fig4.WindowState = 'maximized';
@@ -170,7 +163,5 @@ ylabel('Coefficients')
 xlabel('$\theta$', 'Interpreter', 'latex')
 legend('$|\mathcal{F}(\widetilde{\mathbf{Z}}_L^{20})|$', 'Interpreter', 'latex')
 
-name = 'DFT_noise_modes_2.png';
-exportgraphics(fig4,[path,'\', name],'Resolution',300) 
 
 end

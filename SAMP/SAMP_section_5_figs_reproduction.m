@@ -2,7 +2,7 @@
 Nreps = 500;
 damps = [0,0] ;
 noise_distribution = 'normal'; % 'bi_normal', 't_student', 'uniform';
-addpath('toolbox')
+addpath(fullfile(fileparts(pwd), 'toolbox'));
 %% Generate Figs 3.a, 3.b
 
 % Generate Data
