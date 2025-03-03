@@ -1,4 +1,4 @@
-function epsilon = compute_signal_detection_features(left_mode, poles, params)
+function epsilon = compute_SAMP_signal_detection_features(left_mode, poles, params)
 
 % Extract the relevant information from the left mode
 Nfft = 2^(nextpow2(size(left_mode,1)));
