@@ -34,7 +34,7 @@ for intLength = params.INTERVAL_LENGTH_RANGE
         % SAMP (our)
         tic;
         [left_mode, mp_eigenvalues, b_MP, b_new] = get_MP_components(H, params.RANK_TYPE, []);
-        epsilon = compute_signal_detection_features(left_mode, mp_eigenvalues, params);
+        epsilon = compute_SAMP_signal_detection_features(left_mode, mp_eigenvalues, params);
         t_eff_MP = toc;
 
         tic;
